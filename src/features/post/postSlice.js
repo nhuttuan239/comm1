@@ -130,6 +130,7 @@ export const deletePost =
       // console.log(response)
       const userId = response.data.author;
       dispatch(getPosts({ userId }));
+      dispatch(getCurrentUserProfile());
     } catch (error) {
       dispatch(slice.actions.hasError(error.message));
       toast.error(error.message);

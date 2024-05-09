@@ -3,13 +3,9 @@ import { Avatar, Box, Paper, Stack, Typography } from "@mui/material";
 import { fDate } from "../../utils/formatTime";
 import CommentReaction from "./CommentReaction";
 
-import CloseIcon from "@mui/icons-material/Close";
-import { useDispatch } from "react-redux";
-import { deleteComments } from "./commentSlice";
 import DeleteComfirm from "../../components/DeleteComfirm";
 
 function CommentCard({ comment }) {
-  const dispatch = useDispatch();
   return (
     <Stack direction="row" spacing={2}>
       <Avatar alt={comment.author?.name} src={comment.author?.avatarUrl} />
